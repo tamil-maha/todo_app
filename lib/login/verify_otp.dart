@@ -176,7 +176,7 @@ class _VerifyOTPState extends State<VerifyOTP> {
                                         height: 10,
                                       ),
                                       Text(
-                                        "+91 " + LoginInfo.phoneNumber,
+                                         LoginInfo.phoneNumber,
                                         style: TextStyle(
                                             color: Colors.grey[600],
                                             fontWeight: FontWeight.bold,

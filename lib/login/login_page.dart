@@ -23,17 +23,15 @@ class _LoginPageState extends State<LoginPage> {
       inAsyncCall: LoginInfo.isSendingOTP,
       child: Scaffold(
         appBar: AppBar(
-          shadowColor: Colors.transparent,
           titleSpacing: 0,
           brightness: Brightness.dark,
-          backgroundColor: Color(0xff7b72df),
           title: Text(
-            'WELCOME TO',
+            'TODO  APP',
             style: TextStyle(
                 fontSize: 13, fontWeight: FontWeight.bold, color: Colors.white),
           ),
           centerTitle: true,
-          elevation: 0,
+          elevation: 10,
         ),
         body:Container(
           color: Color(0xfff4f4f4),
@@ -165,7 +163,7 @@ class _LoginPageState extends State<LoginPage> {
                         context, phoneController.text.toString(), this);
                     setState(() {});
                   },
-                  backgroundColor: Colors.deepOrange,
+                  backgroundColor: Colors.teal,
                   child: Icon(
                     Icons.arrow_forward,
                   ),
