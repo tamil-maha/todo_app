@@ -18,21 +18,7 @@ class LoginInfo {
   static String customerDocID;
   static List<ToDoEvents> toDoEventList = new List();
 
-  static Future<void> fetchEventList() async {
 
-    toDoEventList.clear();
-    QuerySnapshot eventListQuery = await FirebaseFirestore.instance
-        .collection('customers')
-        .doc(LoginInfo.customerDocID)
-        .collection('to_do_events')
-        .get();
-
-    if (eventListQuery.docs.length > 0) {
-      for (DocumentSnapshot doc in eventListQuery.docs) {
-        toDoEventList.add(new ToDoEvents.fromJSON(doc.id, doc.data()));
-      }
-    }
-  }
 
   static Future<bool> loginCustomer() async {
     QuerySnapshot customerQuery = await FirebaseFirestore.instance
@@ -47,7 +33,7 @@ class LoginInfo {
       await addressRef.add(dataToInsert).then((rsp) => customerDocID = rsp.id);
     } else {
       customerDocID = customerQuery.docs[0].id;
-      fetchEventList();
+      //fetchEventList();
     }
     return true;
   }
