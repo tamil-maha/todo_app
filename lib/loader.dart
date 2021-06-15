@@ -14,8 +14,8 @@ class Loader extends StatelessWidget {
     ),
     child: const Center(
         child: CircularProgressIndicator(
-          backgroundColor: Colors.white,
-        )),
+      backgroundColor: Colors.white,
+    )),
   );
   final bool dismissible;
   final Widget child;

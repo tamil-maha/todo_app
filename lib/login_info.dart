@@ -18,8 +18,6 @@ class LoginInfo {
   static String customerDocID;
   static List<ToDoEvents> toDoEventList = new List();
 
-
-
   static Future<bool> loginCustomer() async {
     QuerySnapshot customerQuery = await FirebaseFirestore.instance
         .collection('customers')

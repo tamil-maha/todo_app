@@ -6,6 +6,7 @@ import 'package:todo/event.dart';
 
 class EventDetailPage extends StatefulWidget {
   var index;
+
   EventDetailPage({this.index});
 
   @override
@@ -23,21 +24,49 @@ class _EventDetailPageState extends State<EventDetailPage> {
         brightness: Brightness.dark,
       ),
       body: SingleChildScrollView(
-        child:Container(
+        child: Container(
           margin: EdgeInsets.all(10),
           padding: EdgeInsets.only(top: 5, bottom: 5),
-          child:  Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Title', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 16),),
-              SizedBox(height: 10,),
-              Text(eventDetail.title, style: TextStyle(color: Colors.black, fontWeight: FontWeight.normal, fontSize: 13),),
-              SizedBox(height: 25,),
-
-              Text('Description', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 16),),
-              SizedBox(height: 10,),
-              Text(eventDetail.desc, style: TextStyle(color: Colors.black, fontWeight: FontWeight.normal, fontSize: 13),),
-
+              Text(
+                'Title',
+                style: TextStyle(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                eventDetail.title,
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 13),
+              ),
+              SizedBox(
+                height: 25,
+              ),
+              Text(
+                'Description',
+                style: TextStyle(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                eventDetail.desc,
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 13),
+              ),
             ],
           ),
         ),

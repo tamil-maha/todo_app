@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:todo/login_info.dart';
 import 'package:get_it/get_it.dart';
 
-
 class ToDoEvents {
   String eventID;
   String title;
@@ -26,6 +25,7 @@ class ToDoEvents {
 
 class EventList extends StatefulWidget {
   List<ToDoEvents> events;
+
   EventList({this.events});
 
   // static EventListState of(BuildContext context) {
@@ -33,22 +33,20 @@ class EventList extends StatefulWidget {
   //   as InheritedEventWidget).eventListInfo;
   // }
   static EventListState instance;
+
   @override
   EventListState createState() {
     instance = EventListState();
     return instance;
   }
-
 }
 
 class EventListState extends State<EventList> {
-
   @override
   void initState() {
     super.initState();
     setState(() {
-     widget.events = LoginInfo.toDoEventList;
-
+      widget.events = LoginInfo.toDoEventList;
     });
   }
 
@@ -57,7 +55,6 @@ class EventListState extends State<EventList> {
     return Container();
   }
 }
-
 
 // class InheritedEventWidget extends InheritedWidget {
 //   final Widget child;
@@ -79,7 +76,6 @@ class EventListState extends State<EventList> {
 //     return oldWidget.eventInfo.events != oldWidget;
 //   }
 // }
-
 
 //GetIt locator = GetIt.instance;
 

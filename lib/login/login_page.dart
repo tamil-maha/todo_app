@@ -15,7 +15,6 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   TextEditingController phoneController = TextEditingController();
 
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -33,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
           centerTitle: true,
           elevation: 10,
         ),
-        body:Container(
+        body: Container(
           color: Color(0xfff4f4f4),
           child: ListView(
             children: [
@@ -144,13 +143,14 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     Container(
                       margin: EdgeInsets.only(top: 5),
-                      child: Text(LoginInfo.errorMsg, style: TextStyle(color: Colors.red),),
-                    ) ,
+                      child: Text(
+                        LoginInfo.errorMsg,
+                        style: TextStyle(color: Colors.red),
+                      ),
+                    ),
                   ],
                 ),
-
               ),
-
               Center(
                 child: FloatingActionButton(
                   onPressed: () {
@@ -175,9 +175,6 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
-
-
-
 
   @override
   void dispose() {
